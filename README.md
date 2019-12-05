@@ -39,6 +39,11 @@ Clone the repository to your working environment.
 ```
 git clone git@github.com:wathigo/Bookstore.git
 ```
+Install dependencies
+
+```
+npm -i 
+```
 
 Run the project on a local server
 
