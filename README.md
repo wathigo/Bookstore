@@ -6,9 +6,9 @@
     <br />
     <a href="">View Demo</a>
     ·
-    <a href="#">Report Bug</a>
+    <a href="https://github.com/wathigo/Bookstore/issues">Report Bug</a>
     ·
-    <a href="#">Request Feature</a>
+    <a href="https://github.com/wathigo/Bookstore/issues">Request Feature</a>
   </p>
 </p>
 
