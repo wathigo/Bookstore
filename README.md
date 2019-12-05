@@ -50,7 +50,7 @@ npm start
 
 ### Built With
 * [React](https://reactjs.org/)
-* [Redux] (https://redux.js.org/introduction/getting-started)
+* [Redux](https://redux.js.org/introduction/getting-started)
 
 ### Contact
 * [Simon Wathigo](https://github.com/wathigo) - wathigosimon@gmail.com - [Linkedin](https://www.linkedin.com/in/simon-wathigo-445370183/)
