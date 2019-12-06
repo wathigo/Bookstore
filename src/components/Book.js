@@ -7,6 +7,7 @@ class Book extends React.Component {
   render() {
     return (
       <div className="Book">
+        {this.props.book}
       </div>
     );
   }

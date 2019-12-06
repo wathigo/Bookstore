@@ -12,28 +12,28 @@ class BooksForm extends React.Component {
 
   render() {
     return (
-<form>
-  <label>
-    Title:
-    <input type="text" name="title" />
-  </label> <br />
-  <label>
-      Category:
-  <select value={this.state.category}>
-        <option value="Action">Action</option>
-        <option value="Biography">Biography</option>
-        <option value="History">History</option>
-        <option value="Horror">Horror</option>
-        <option value="Kids">Kids</option>
-        <option value="Learning">Learning</option>
-        <option value="Sci-fi">Sci-fi</option>
+      <form>
+        <label>
+          Title:
+          <input type="text" name="title" />
+        </label> <br />
+        <label>
+            Category:
+        <select>
+              <option value="Action">Action</option>
+              <option value="Biography">Biography</option>
+              <option value="History">History</option>
+              <option value="Horror">Horror</option>
+              <option value="Kids">Kids</option>
+              <option value="Learning">Learning</option>
+              <option value="Sci-fi">Sci-fi</option>
 
- </select>
- </label> 
+       </select>
+       </label>
 
- <br />
-  <input type="submit" value="Submit" />
-</form>
+       <br />
+        <input type="submit" value="Submit" />
+      </form>
     );
   }
 }
