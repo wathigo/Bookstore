@@ -3,12 +3,12 @@
 import React from 'react';
 
 class BooksForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          category: 'Action'
-        };
-      }
+  constructor(props) {
+    super(props);
+    this.state = {
+      category: 'Action'
+    };
+  }
 
   render() {
     return (
@@ -18,20 +18,20 @@ class BooksForm extends React.Component {
           <input type="text" name="title" />
         </label> <br />
         <label>
-            Category:
+          Category:
         <select>
-              <option value="Action">Action</option>
-              <option value="Biography">Biography</option>
-              <option value="History">History</option>
-              <option value="Horror">Horror</option>
-              <option value="Kids">Kids</option>
-              <option value="Learning">Learning</option>
-              <option value="Sci-fi">Sci-fi</option>
+            <option value="Action">Action</option>
+            <option value="Biography">Biography</option>
+            <option value="History">History</option>
+            <option value="Horror">Horror</option>
+            <option value="Kids">Kids</option>
+            <option value="Learning">Learning</option>
+            <option value="Sci-fi">Sci-fi</option>
 
-       </select>
-       </label>
+          </select>
+        </label>
 
-       <br />
+        <br />
         <input type="submit" value="Submit" />
       </form>
     );
