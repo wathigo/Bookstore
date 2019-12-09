@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/jsx-filename-extension */
