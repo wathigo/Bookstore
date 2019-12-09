@@ -11,13 +11,13 @@ import Actions from '../actions';
 import Book from './Book';
 
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     bookStore: state,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     createBook: Actions.createBook,
     removeBook: Actions.removeBook,
@@ -27,7 +27,7 @@ const mapDispatchToProps = dispatch => {
 class BookList extends React.Component {
   render() {
     // eslint-disable-next-line react/jsx-key
-    const booksAll = this.props.bookStore.bookestore.map((item) => <Book book={item} />);
+    const booksAll = this.props.bookStore.bookestore.map(item => <Book book={item} />);
 
     return (
       <div className="BookList">
