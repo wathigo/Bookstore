@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -19,9 +20,8 @@ const book3 = createBook("You Don't know Javascript", 'Education');
 
 const books = [book1, book2, book3];
 
-const store = createStore(rootReducer, { bookestore: books },
-  // eslint-disable-next-line no-underscore-dangle
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+// eslint-disable-next-line max-len
+const store = createStore(rootReducer, { bookestore: books }, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
   <Provider store={store}>
