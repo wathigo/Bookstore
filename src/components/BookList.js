@@ -25,9 +25,7 @@ class BookList extends React.Component {
   render() {
 
     const booksAll = this.props.bookStore.bookestore.map((item) =>
-      <tr>
         <Book book={item} />
-      </tr>
     );
 
     return (
@@ -39,7 +37,6 @@ class BookList extends React.Component {
             <th>Category</th>
           </tr>
           {booksAll}
-
         </table>
       </div>
     );
