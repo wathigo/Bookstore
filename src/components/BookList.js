@@ -11,13 +11,13 @@ import Actions from '../actions';
 import Book from './Book';
 
 
-const mapStateToProps = function (state) {
+const mapStateToProps = state => {
   return {
     bookStore: state,
   };
 };
 
-const mapDispatchToProps = function (dispatch) {
+const mapDispatchToProps = dispatch => {
   return bindActionCreators({
     createBook: Actions.createBook,
     removeBook: Actions.removeBook,
