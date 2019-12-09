@@ -43,4 +43,4 @@ class BookList extends React.Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(BookList)
+export default connect(mapStateToProps, mapDispatchToProps)(BookList);
