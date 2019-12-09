@@ -16,12 +16,12 @@ class BooksForm extends React.Component {
   render() {
     return (
       <form>
-        <label>
+        <label htmlFor="title">
           Title:
           <input type="text" name="title" />
         </label>
         <br />
-        <label>
+        <label htmlFor="category">
           Category:
           <select>
             <option value="Action">Action</option>
