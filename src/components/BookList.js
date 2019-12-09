@@ -4,17 +4,16 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Actions from '../actions';
 import Book from './Book';
 
 
-const mapStateToProps = (state) => ({ bookStore: state });
+const mapStateToProps = state => ({ bookStore: state });
 
 
-const mapDispatchToProps = (dispatch) => (({
+const mapDispatchToProps = dispatch => (({
   createBook: Actions.createBook,
   removeBook: Actions.removeBook,
 }, dispatch));
