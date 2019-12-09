@@ -6,8 +6,8 @@ import { connect } from 'react-redux';
 import Actions from '../actions'
 import Book from './Book';
 
-const mapStateToProps = function(state){
-  console.log(state)
+const mapStateToProps = function (state) {
+  console.log("state booklist", state)
   return {
     bookStore: state
   }
@@ -23,9 +23,24 @@ const mapDispatchToProps = function (dispatch) {
 class BookList extends React.Component {
 
   render() {
+
+    const booksAll = this.props.bookStore.bookestore.map((item) =>
+      <tr>
+        <Book book={item} />
+      </tr>
+    );
+
     return (
       <div className="BookList">
-        <Book book={this.props.bookStore}/>
+        <table className="BooksTable">
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Category</th>
+          </tr>
+          {booksAll}
+
+        </table>
       </div>
     );
   }
