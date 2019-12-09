@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/destructuring-assignment */
@@ -25,6 +26,7 @@ const mapDispatchToProps = function (dispatch) {
 
 class BookList extends React.Component {
   render() {
+    // eslint-disable-next-line react/jsx-key
     const booksAll = this.props.bookStore.bookestore.map((item) => <Book book={item} />);
 
     return (
