@@ -48,16 +48,7 @@ class BooksForm extends React.Component {
   }
 
   handleChange(event) {
-    switch (event.target.id) {
-      case 'title':
-        this.setState({ title: event.target.value });
-        break;
-      case 'category':
-        this.setState({ category: event.target.value });
-        break;
-      default:
-        break;
-    }
+    this.setState({ [event.target.id]: event.target.value });
   }
 
   render() {
