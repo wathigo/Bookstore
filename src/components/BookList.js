@@ -27,7 +27,7 @@ const mapDispatchToProps = function (dispatch) {
 
 class BookList extends React.Component {
   render() {
-    const booksAll = this.props.bookStore.map(item => <Book book={item} />);
+    const booksAll = this.props.bookStore.map((item, index) => <Book book={item} key={index} />);
 
     return (
       <div className="BookList">
