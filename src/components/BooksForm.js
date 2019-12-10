@@ -3,6 +3,7 @@
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prefer-stateless-function */
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 
 const CATEGORIES = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-fi"]
@@ -16,7 +17,7 @@ class BooksForm extends React.Component {
   }
 
   render() {
-    const options = CATEGORIES.map((category, index) => <option>{category}</option>)
+    const options = CATEGORIES.map((category, index) => <option key={category}>{category}</option>)
     return (
       <form>
         <label htmlFor="title">
