@@ -13,7 +13,7 @@ const Actions = (() => {
     book_id: book.id,
   });
 
-  return (createBook, removeBook);
+  return { createBook, removeBook };
 })();
 
 export default Actions;

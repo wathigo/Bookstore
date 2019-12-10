@@ -1,11 +1,11 @@
-const booksReducer = (books = [], action) => {
-  switch (action) {
+const booksReducer = (state = null, action) => {
+  switch (action.type) {
     case 'CREATE_BOOK':
-      return [...books, action.book];
+      return [...state, action.book];
     case 'REMOVE_BOOK':
-      return books.filter(book => book.id !== action.book_id);
+      return state.filter(book => book.id !== action.book_id);
     default:
-      return books;
+      return state;
   }
 };
 
