@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable react/require-default-props */
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/destructuring-assignment */

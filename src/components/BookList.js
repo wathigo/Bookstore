@@ -19,7 +19,7 @@ const mapStateToProps = function (state) {
 
 class BookList extends React.Component {
   render() {
-    const booksAll = this.props.bookStore.map((item) => <Book book={item} key={item.id} />);
+    const booksAll = this.props.bookStore.map(item => <Book book={item} key={item.id} />);
 
     return (
       <div className="BookList">

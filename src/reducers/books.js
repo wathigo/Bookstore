@@ -1,5 +1,4 @@
 const booksReducer = (state = null, action) => {
-  console.log(state, 'state!')
   switch (action.type) {
     case 'CREATE_BOOK':
       return [...state, action.book];
