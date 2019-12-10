@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable react/no-unused-state */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-filename-extension */
@@ -5,11 +6,12 @@
 /* eslint-disable react/prefer-stateless-function */
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Actions from '../actions';
 
-const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-fi'];
+
+const CATEGORIES = ['-------', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-fi'];
 
 const mapStateToProps = function (state) {
   return {
@@ -21,8 +23,8 @@ const mapDispatchToProps = function (dispatch) {
   return {
     createBook: (book) => {
       dispatch(Actions.createBook(book));
-      }
-};
+    },
+  };
 };
 
 class BooksForm extends React.Component {
@@ -30,7 +32,7 @@ class BooksForm extends React.Component {
     super(props);
     this.state = {
       category: '',
-      title: ''
+      title: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -38,44 +40,38 @@ class BooksForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.dispatch(Actions.createBook({
+    this.props.createBook({
+      id: Math.random(),
       title: this.state.title,
-      category: this.state.category
-    }))
-    // this.props.createBook({
-    //   title: this.state.title,
-    //   category: this.state.category
-    // });
-    console.log(this.props.bookStore, "Current state!")
+      category: this.state.category,
+    });
   }
 
   handleChange(event) {
     switch (event.target.id) {
       case 'title':
-        this.state.title = event.target.value;
+        this.setState({ title: event.target.value });
         break;
       case 'category':
-        this.state.category = event.target.value;
+        this.setState({ category: event.target.value });
         break;
       default:
         break;
-
     }
-
   }
 
   render() {
-    const options = CATEGORIES.map(category => <option key={category}>{category}</option>);
+    const options = CATEGORIES.map((category) => <option key={category}>{category}</option>);
     return (
-      <form onSubmit={ this.handleSubmit }>
+      <form onSubmit={this.handleSubmit}>
         <label htmlFor="title">
           Title:
-          <input type="text" id='title' name="title" onChange={ this.handleChange } />
+          <input type="text" id="title" name="title" onChange={this.handleChange} />
         </label>
         <br />
         <label htmlFor="category">
           Category:
-          <select id='category' onChange={ this.handleChange }>
+          <select id="category" onChange={this.handleChange}>
             {options}
           </select>
         </label>
@@ -87,4 +83,9 @@ class BooksForm extends React.Component {
   }
 }
 
-export default connect(mapStateToProps)(BooksForm);
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksForm);
