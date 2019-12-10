@@ -14,7 +14,7 @@ import Book from './Book';
 
 const mapStateToProps = function (state) {
   return {
-    bookStore: state,
+    bookStore: state.bookestore,
   };
 };
 
@@ -27,7 +27,7 @@ const mapDispatchToProps = function (dispatch) {
 
 class BookList extends React.Component {
   render() {
-    const booksAll = this.props.bookStore.bookestore.map(item => <Book book={item} />);
+    const booksAll = this.props.bookStore.map(item => <Book book={item} />);
 
     return (
       <div className="BookList">
