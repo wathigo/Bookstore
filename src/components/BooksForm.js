@@ -5,6 +5,8 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 
+const CATEGORIES = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-fi"]
+
 class BooksForm extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +16,7 @@ class BooksForm extends React.Component {
   }
 
   render() {
+    const options = CATEGORIES.map((category, index) => <option>{category}</option>)
     return (
       <form>
         <label htmlFor="title">
@@ -24,14 +27,7 @@ class BooksForm extends React.Component {
         <label htmlFor="category">
           Category:
           <select>
-            <option value="Action">Action</option>
-            <option value="Biography">Biography</option>
-            <option value="History">History</option>
-            <option value="Horror">Horror</option>
-            <option value="Kids">Kids</option>
-            <option value="Learning">Learning</option>
-            <option value="Sci-fi">Sci-fi</option>
-
+            {options}
           </select>
         </label>
 
