@@ -27,21 +27,21 @@ const mapDispatchToProps = function (dispatch) {
 
 class BookList extends React.Component {
   render() {
-    const booksAll = this.props.bookStore.map((item, index) => <Book book={item} key={index} />);
+    const booksAll = this.props.bookStore.map((item, index) => <Book book={item} key={item.id} />);
 
     return (
       <div className="BookList">
         <table className="BooksTable">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {booksAll}
-        </tbody>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            {booksAll}
+          </tbody>
         </table>
       </div>
     );

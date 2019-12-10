@@ -6,7 +6,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 
-const CATEGORIES = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-fi"]
+const CATEGORIES = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-fi']
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class BooksForm extends React.Component {
   }
 
   render() {
-    const options = CATEGORIES.map((category, index) => <option key={category}>{category}</option>)
+    const options = CATEGORIES.map((category) => <option key={category}>{category}</option>)
     return (
       <form>
         <label htmlFor="title">
