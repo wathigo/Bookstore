@@ -32,12 +32,16 @@ class BookList extends React.Component {
     return (
       <div className="BookList">
         <table className="BooksTable">
+        <thead>
           <tr>
             <th>ID</th>
             <th>Title</th>
             <th>Category</th>
           </tr>
+        </thead>
+        <tbody>
           {booksAll}
+        </tbody>
         </table>
       </div>
     );
@@ -45,7 +49,7 @@ class BookList extends React.Component {
 }
 
 BookList.propTypes = {
-  bookStore: PropTypes.object,
+  bookStore: PropTypes.array,
 };
 
 BookList.defaultProps = {

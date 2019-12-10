@@ -9,9 +9,9 @@ class Book extends React.Component {
   render() {
     return (
       <tr>
-        <th>{this.props.book.id}</th>
-        <th>{this.props.book.title}</th>
-        <th>{this.props.book.category}</th>
+        <td>{this.props.book.id}</td>
+        <td>{this.props.book.title}</td>
+        <td>{this.props.book.category}</td>
       </tr>
     );
   }
@@ -20,5 +20,5 @@ class Book extends React.Component {
 export default Book;
 
 Book.propTypes = {
-  book: PropTypes.string,
+  book: PropTypes.object,
 };
