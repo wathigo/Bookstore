@@ -2,6 +2,7 @@
 const Actions = (() => {
   const CREATE_BOOK = 'CREATE_BOOK';
   const REMOVE_BOOK = 'REMOVE_BOOK';
+  const CHANGE_FILTER = 'CHANGE_FILTER';
 
   const createBook = book => ({
     type: CREATE_BOOK,
@@ -13,7 +14,12 @@ const Actions = (() => {
     book_id: book.id,
   });
 
-  return { createBook, removeBook };
+  const changeFilter = filter => ({
+    type: CHANGE_FILTER,
+    filter: filter
+  });
+
+  return { createBook, removeBook, changeFilter };
 })();
 
 export default Actions;
