@@ -52,7 +52,7 @@ class BooksForm extends React.Component {
   }
 
   render() {
-    const options = CATEGORIES.map((category) => <option key={category}>{category}</option>);
+    const options = CATEGORIES.map(category => <option key={category}>{category}</option>);
     return (
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="title">

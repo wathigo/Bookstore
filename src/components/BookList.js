@@ -36,10 +36,10 @@ class BookList extends React.Component {
 
   booksAll(filter) {
     if (filter === 'All') {
-      return this.props.bookStore.map((item) => <Book book={item} key={item.id} />);
+      return this.props.bookStore.map(item => <Book book={item} key={item.id} />);
     }
-    const sBooks = this.props.bookStore.filter((item) => item.category === filter);
-    return sBooks.map((item) => <Book book={item} key={item.id} />);
+    const sBooks = this.props.bookStore.filter(item => item.category === filter);
+    return sBooks.map(item => <Book book={item} key={item.id} />);
   }
 
   handleFilterChange(event) {

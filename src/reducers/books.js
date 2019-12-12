@@ -3,7 +3,7 @@ const booksReducer = (state = null, action) => {
     case 'CREATE_BOOK':
       return [...state, action.book];
     case 'REMOVE_BOOK':
-      return state.filter((book) => book.id !== action.book_id);
+      return state.filter(book => book.id !== action.book_id);
     default:
       return state;
   }
