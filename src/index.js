@@ -14,9 +14,9 @@ const createBook = (title, category) => ({
   category,
 });
 
-const book1 = createBook('Paradise', 'Entertainment');
-const book2 = createBook('Ethical Hacking', 'Education');
-const book3 = createBook("You Don't know Javascript", 'Education');
+const book1 = createBook('Paradise', 'Horror');
+const book2 = createBook('Ethical Hacking', 'Kids');
+const book3 = createBook("You Don't know Javascript", 'Action');
 
 const books = [book1, book2, book3];
 
