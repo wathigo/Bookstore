@@ -1,5 +1,9 @@
+/* eslint-disable func-names */
+/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 
 const mapStateToProps = function (state) {
@@ -13,16 +17,20 @@ const CATEGORIES = ['-------', 'All', 'Action', 'Biography', 'History', 'Horror'
 
 class CategoryFilter extends React.Component {
   render() {
-    const options = CATEGORIES.map(category => <option>{category}</option>)
+    const options = CATEGORIES.map((category) => <option key={category}>{category}</option>);
     return (
       <div className="categoryfilter">
-      <h1>Filter</h1>
-      <select onChange={this.props.handleFilterChange}>
-        {options}
-      </select>
+        <h1>Filter</h1>
+        <select onChange={this.props.handleFilterChange}>
+          {options}
+        </select>
       </div>
-    )
+    );
   }
 }
+
+CategoryFilter.propTypes = {
+  handleFilterChange: PropTypes.func.isRequired,
+};
 
 export default connect(mapStateToProps)(CategoryFilter);

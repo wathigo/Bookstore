@@ -22,7 +22,6 @@ const mapStateToProps = function (state) {
 const mapDispatchToProps = function (dispatch) {
   return {
     filterBooks: (filter) => {
-      console.log("Dispatching...")
       dispatch(Actions.changeFilter(filter));
     },
   };
@@ -31,36 +30,27 @@ const mapDispatchToProps = function (dispatch) {
 class BookList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      book: this.booksAll('All'),
-    }; 
-
     this.handleFilterChange = this.handleFilterChange.bind(this);
     this.booksAll = this.booksAll.bind(this);
-
-  };
+  }
 
   booksAll(filter) {
-    console.log(this.props.filter, 'beggining');
     if (filter === 'All') {
-      console.log(" filter all")
       return this.props.bookStore.map((item) => <Book book={item} key={item.id} />);
     }
-    const sBooks = this.props.bookStore.filter((item) => item.category === this.props.filter);
-    console.log("FILTERING....", sBooks)
+    const sBooks = this.props.bookStore.filter((item) => item.category === filter);
     return sBooks.map((item) => <Book book={item} key={item.id} />);
   }
 
   handleFilterChange(event) {
     event.preventDefault();
     this.props.filterBooks(event.target.value);
-    this.setState({ book: this.booksAll(event.target.value) });
   }
 
   render() {
     return (
       <div className="BookList">
-        <CategoryFilter handleFilterChange={this.handleFilterChange} />
+        <CategoryFilter handleFilterChange={this.handleFilterChange} filter={this.props.filter} />
         <table className="BooksTable">
           <thead>
             <tr>
@@ -70,7 +60,7 @@ class BookList extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.book}
+            {this.booksAll(this.props.filter)}
           </tbody>
         </table>
       </div>
