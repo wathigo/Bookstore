@@ -13,7 +13,7 @@ const mapStateToProps = function (state) {
   };
 };
 
-const CATEGORIES = ['-------', 'All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-fi'];
+const CATEGORIES = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-fi'];
 
 class CategoryFilter extends React.Component {
   render() {
