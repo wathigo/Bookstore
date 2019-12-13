@@ -17,7 +17,7 @@ const CATEGORIES = ['-------', 'All', 'Action', 'Biography', 'History', 'Horror'
 
 class CategoryFilter extends React.Component {
   render() {
-    const options = CATEGORIES.map((category) => <option key={category}>{category}</option>);
+    const options = CATEGORIES.map(category => <option key={category}>{category}</option>);
     return (
       <div className="categoryfilter">
         <h1 className="new-book">Filter</h1>
