@@ -20,8 +20,8 @@ class CategoryFilter extends React.Component {
     const options = CATEGORIES.map(category => <option key={category}>{category}</option>);
     return (
       <div className="categoryfilter">
-        <h1>Filter</h1>
-        <select onChange={this.props.handleFilterChange}>
+        <h1 className="new-book">Filter</h1>
+        <select id="categorySelectors-filter" onChange={this.props.handleFilterChange}>
           {options}
         </select>
       </div>

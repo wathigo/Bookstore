@@ -52,16 +52,18 @@ class BooksForm extends React.Component {
   }
 
   render() {
-    const options = CATEGORIES.map(category => <option key={category}>{category}</option>);
+    const options = CATEGORIES.map((category) => <option key={category}>{category}</option>);
     return (
+      <div className="wholeFrom">
       <form onSubmit={this.handleSubmit}>
-          <h1 className='new-book'> ADD A NEW BOOK </h1>
-          <input type="text" id="title" name="title" placeholder='Book title' onChange={this.handleChange} />
-          <select id="category" onChange={this.handleChange}>
-            {options}
-          </select>
-        <input type="submit" value="Submit" />
+        <h1 className="new-book"> ADD A NEW BOOK </h1>
+        <input type="text" id="titleInput" name="title" placeholder="Book title" onChange={this.handleChange} />
+        <select id="categorySelectors-input" onChange={this.handleChange}>
+          {options}
+        </select>
+        <input type="submit" value="ADD BOOK" className="submitBook" />
       </form>
+      </div>
     );
   }
 }

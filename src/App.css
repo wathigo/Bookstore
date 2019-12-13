@@ -10,9 +10,19 @@ nav{
 }
 
 .header{
-  color: blue;
   display: inline-block;
   margin-left: 3em;
+
+  width: 240px;
+  height: 37px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
 }
 
 .nav-items {
@@ -44,6 +54,10 @@ th, td {
   padding: 15px;
 }
 
+td{
+  width: 1000px;
+}
+
 th {
   text-align: left;
 }
@@ -58,7 +72,7 @@ table {
   height: 33px;
   border-radius: 3px;
   background-color: #0290ff;
-  font-family: RobotoSlab;
+  font-family: 'Roboto', sans-serif;
   font-size: 13px;
   font-weight: 300;
   font-stretch: normal;
@@ -68,23 +82,42 @@ table {
   text-align: center;
   color: #ffffff;
   cursor: pointer;
+  margin-top: 5%;
+  margin-left: 65%;
 }
 
 .remove:hover {
   background-color: #0362aa;
 }
 
+.bookInfo-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.removeButton-container{
+    height: 100%;
+    width: 50%;
+}
+
+.description-container{
+  height: 100%;
+  width: 45%;
+
+}
 /* category */
 
 .categoryfilter {
   display: inline-block;
 }
 
-#category {
+
+.category {
   width: 49px;
   height: 18px;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: bold;
   font-stretch: normal;
@@ -94,7 +127,7 @@ table {
   color: #121212;
 }
 
-#title{
+.title{
   width: 197px;
   height: 29px;
   font-family: RobotoSlab;
@@ -107,11 +140,70 @@ table {
   color: #121212;
 }
 
+#categorySelectors-input{
+  width: 285px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  margin-right: 2%;
+}
+
+#categorySelectors-filter{
+  width: 142px;
+  height: 22px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+
+}
+
+
+#titleInput{
+  width: 464px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  margin-right: 2%;
+  margin-left: 5%;
+
+}
+
 .filter {
   width: 105px;
   height: 16px;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
@@ -125,7 +217,7 @@ table {
   margin: 0 2em 0 2em;
   width: 59px;
   height: 16px;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
@@ -135,18 +227,21 @@ table {
   color: #121212;
 }
 
-.book-cont {
-  width: 1200px;
+.book-cont{
+  width: 800px;
   height: 120px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #ffffff;
+  display: inline-block;
+  margin-bottom: 2%;
+  margin-left: 10%;
 }
 
 .new-book {
-  width: 174px;
+  width: 274px;
   height: 24px;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
@@ -154,4 +249,35 @@ table {
   line-height: normal;
   letter-spacing: -0.18px;
   color: #888888;
+  margin-left: 5%;
+}
+
+.submitBook{
+    border: none;
+    width: 184px;
+    height: 45px;
+    border-radius: 3px;
+    background-color: #0290ff;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.submitBook:hover {
+  background-color: #0362aa;
+}
+
+.wholeFrom{
+  width: 90%;
+  border-top: solid 1px #e8e8e8;
+  padding-top: 2%;
+  margin-bottom: 5%;
+  margin-left: 4%;
 }

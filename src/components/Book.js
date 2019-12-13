@@ -36,14 +36,28 @@ class Book extends React.Component {
 
 
   render() {
-    const { id, title, category } = this.props.book;
+    const { title, category } = this.props.book;
     return (
-      <tr className='book-cont'>
+      <tr className="book-cont">
         <td>
-        <div id='category'> {category} </div>
-        <div id='title'> {title} </div>
+          <div className="bookInfo-container">
+            <div className="description-container">
+              <div className="category">
+                {' '}
+                {category}
+                {' '}
+              </div>
+              <div className="title">
+                {' '}
+                {title}
+                {' '}
+              </div>
+            </div>
+            <div className="removeButton-container">
+              <button onClick={this.handleRemoveBook} type="submit" className="remove">REMOVE</button>
+            </div>
+          </div>
         </td>
-        <td><button onClick={this.handleRemoveBook} type="submit" className='remove'>Delete</button></td>
       </tr>
     );
   }
