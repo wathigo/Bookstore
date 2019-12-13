@@ -9,9 +9,10 @@ const Actions = (() => {
     book,
   });
 
-  const removeBook = book => ({
+  const removeBook = (book, stateInput) => ({
     type: REMOVE_BOOK,
-    book,
+    book_id: book.id,
+    state: stateInput,
   });
 
   const changeFilter = filter => ({

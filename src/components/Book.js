@@ -11,14 +11,14 @@ import Actions from '../actions';
 
 const mapStateToProps = function (state) {
   return {
-    bookStore: state,
+    state,
   };
 };
 
 const mapDispatchToProps = function (dispatch) {
   return {
-    removeBook: (book) => {
-      dispatch(Actions.removeBook(book));
+    removeBook: (book, stateInput) => {
+      dispatch(Actions.removeBook(book, stateInput));
     },
   };
 };
@@ -31,7 +31,7 @@ class Book extends React.Component {
 
   handleRemoveBook(event) {
     event.preventDefault();
-    this.props.removeBook(this.props.book);
+    this.props.removeBook(this.props.book, this.props.state);
   }
 
 
@@ -66,6 +66,7 @@ class Book extends React.Component {
 Book.propTypes = {
   book: PropTypes.object,
   removeBook: PropTypes.func,
+  state: PropTypes.object,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Book);
