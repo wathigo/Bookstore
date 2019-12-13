@@ -4,7 +4,7 @@ const filterReducer = (state, action) => {
     case 'CHANGE_FILTER':
       return filter;
     default:
-      return 'All';
+      return state || 'All';
   }
 };
 
