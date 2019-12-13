@@ -1,3 +1,6 @@
+/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable func-names */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -7,7 +10,7 @@ import BookForm from './components/BooksForm';
 
 const mapStateToProps = function (state) {
   return {
-    filter: state.filter
+    filter: state.filter,
   };
 };
 
@@ -16,10 +19,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <nav>
-          <div className='nav-items'>
-            <h2 className='header'> BookStore CMS </h2>
-            <span className='books'>BOOKS</span>
-            <span className='filter'>{ this.props.filter }</span>
+          <div className="nav-items">
+            <h2 className="header"> BookStore CMS </h2>
+            <span className="books">BOOKS</span>
+            <span className="filter">{ this.props.filter }</span>
           </div>
         </nav>
         <Booklist />
