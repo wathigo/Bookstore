@@ -52,13 +52,6 @@ class BookList extends React.Component {
       <div className="BookList">
         <CategoryFilter handleFilterChange={this.handleFilterChange} filter={this.props.filter} />
         <table className="BooksTable">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Title</th>
-              <th>Category</th>
-            </tr>
-          </thead>
           <tbody>
             {this.booksAll(this.props.filter)}
           </tbody>

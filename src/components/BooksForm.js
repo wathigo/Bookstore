@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 import Actions from '../actions';
 
 
-const CATEGORIES = ['-------', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-fi'];
+const CATEGORIES = ['Category', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-fi'];
 
 const mapStateToProps = function (state) {
   return {
@@ -54,22 +54,16 @@ class BooksForm extends React.Component {
   render() {
     const options = CATEGORIES.map(category => <option key={category}>{category}</option>);
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="title">
-          Title:
-          <input type="text" id="title" name="title" onChange={this.handleChange} />
-        </label>
-        <br />
-        <label htmlFor="category">
-          Category:
+      <div className="wholeFrom">
+        <form onSubmit={this.handleSubmit}>
+          <h1 className="new-book"> ADD A NEW BOOK </h1>
+          <input type="text" id="title" name="title" placeholder="Book title" onChange={this.handleChange} />
           <select id="category" onChange={this.handleChange}>
             {options}
           </select>
-        </label>
-
-        <br />
-        <input type="submit" value="Submit" />
-      </form>
+          <input type="submit" value="ADD BOOK" className="submitBook" />
+        </form>
+      </div>
     );
   }
 }

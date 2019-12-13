@@ -11,14 +11,14 @@ import Actions from '../actions';
 
 const mapStateToProps = function (state) {
   return {
-    bookStore: state,
+    state,
   };
 };
 
 const mapDispatchToProps = function (dispatch) {
   return {
-    removeBook: (book) => {
-      dispatch(Actions.removeBook(book));
+    removeBook: (book, stateInput) => {
+      dispatch(Actions.removeBook(book, stateInput));
     },
   };
 };
@@ -31,18 +31,33 @@ class Book extends React.Component {
 
   handleRemoveBook(event) {
     event.preventDefault();
-    this.props.removeBook(this.props.book);
+    this.props.removeBook(this.props.book, this.props.state);
   }
 
 
   render() {
-    const { id, title, category } = this.props.book;
+    const { title, category } = this.props.book;
     return (
-      <tr>
-        <td>{id}</td>
-        <td>{title}</td>
-        <td>{category}</td>
-        <td><button onClick={this.handleRemoveBook} type="submit">Delete</button></td>
+      <tr className="book-cont">
+        <td>
+          <div className="bookInfo-container">
+            <div className="description-container">
+              <div className="category">
+                {' '}
+                {category}
+                {' '}
+              </div>
+              <div className="title">
+                {' '}
+                {title}
+                {' '}
+              </div>
+            </div>
+            <div className="removeButton-container">
+              <button onClick={this.handleRemoveBook} type="submit" className="remove">REMOVE</button>
+            </div>
+          </div>
+        </td>
       </tr>
     );
   }
@@ -51,6 +66,7 @@ class Book extends React.Component {
 Book.propTypes = {
   book: PropTypes.object,
   removeBook: PropTypes.func,
+  state: PropTypes.object,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Book);

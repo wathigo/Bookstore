@@ -1,5 +1,32 @@
-.App {
-  text-align: center;
+body {
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 var(--black-5);
+  background-color: #fafafa;
+}
+
+nav{
+  height: 95px;
+  background-color: #ffffff;
+}
+
+.header{
+  display: inline-block;
+  margin-left: 3em;
+
+  width: 240px;
+  height: 37px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.nav-items {
+  padding-top: 2%;
 }
 
 .App-logo {
@@ -23,17 +50,12 @@
 
 /* Table */
 
-table, th, td {
-  border: 1px solid black;
-}
-
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
 th, td {
   padding: 15px;
+}
+
+td{
+  width: 1000px;
 }
 
 th {
@@ -41,6 +63,226 @@ th {
 }
 
 table {
-  border-spacing: 5px;
   margin: 5% auto 5% auto;
+}
+
+.remove {
+  border: none;
+  width: 184px;
+  height: 33px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 5%;
+  margin-left: 62%;
+}
+
+.remove:hover {
+  background-color: #0362aa;
+}
+
+.bookInfo-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 2%;
+}
+
+.BookList {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.removeButton-container{
+    height: 100%;
+    width: 50%;
+}
+
+.description-container{
+  height: 100%;
+  width: 45%;
+
+}
+/* category */
+
+.categoryfilter {
+  display: inline-block;
+}
+
+
+.category {
+  width: 49px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.title{
+  width: 197px;
+  height: 29px;
+  font-family: RobotoSlab;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+#category{
+  width: 285px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  margin-right: 2%;
+}
+
+#categorySelectors-filter{
+  width: 142px;
+  height: 22px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+
+}
+
+
+#title{
+  width: 464px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  margin-right: 2%;
+  margin-left: 5%;
+
+}
+
+.filter {
+  width: 105px;
+  height: 16px;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.books {
+  margin: 0 2em 0 2em;
+  width: 59px;
+  height: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.book-cont{
+  width: 100%;
+  height: 120px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+  display: inline-block;
+  margin-bottom: 2%;
+}
+
+.new-book {
+  width: 274px;
+  height: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888888;
+  margin-left: 5%;
+}
+
+.submitBook{
+    border: none;
+    width: 184px;
+    height: 45px;
+    border-radius: 3px;
+    background-color: #0290ff;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.submitBook:hover {
+  background-color: #0362aa;
+}
+
+.wholeFrom{
+  width: 90%;
+  border-top: solid 1px #e8e8e8;
+  padding-top: 2%;
+  margin-bottom: 5%;
+  margin-left: 4%;
 }
