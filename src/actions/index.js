@@ -11,7 +11,7 @@ const Actions = (() => {
 
   const removeBook = book => ({
     type: REMOVE_BOOK,
-    book_id: book.id,
+    book,
   });
 
   const changeFilter = filter => ({
