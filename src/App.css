@@ -146,7 +146,7 @@ table {
   color: #121212;
 }
 
-#categorySelectors-input{
+#category{
   width: 285px;
   height: 45px;
   border-radius: 4px;
@@ -185,7 +185,7 @@ table {
 }
 
 
-#titleInput{
+#title{
   width: 464px;
   height: 45px;
   border-radius: 4px;

@@ -57,8 +57,8 @@ class BooksForm extends React.Component {
       <div className="wholeFrom">
         <form onSubmit={this.handleSubmit}>
           <h1 className="new-book"> ADD A NEW BOOK </h1>
-          <input type="text" id="titleInput" name="title" placeholder="Book title" onChange={this.handleChange} />
-          <select id="categorySelectors-input" onChange={this.handleChange}>
+          <input type="text" id="title" name="title" placeholder="Book title" onChange={this.handleChange} />
+          <select id="category" onChange={this.handleChange}>
             {options}
           </select>
           <input type="submit" value="ADD BOOK" className="submitBook" />
