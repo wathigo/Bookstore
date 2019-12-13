@@ -1,5 +1,22 @@
-.App {
-  text-align: center;
+body {
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 var(--black-5);
+  background-color: #fafafa;
+}
+
+nav{
+  height: 95px;
+  background-color: #ffffff;
+}
+
+.header{
+  color: blue;
+  display: inline-block;
+  margin-left: 3em;
+}
+
+.nav-items {
+  padding-top: 2%;
 }
 
 .App-logo {
@@ -23,15 +40,6 @@
 
 /* Table */
 
-table, th, td {
-  border: 1px solid black;
-}
-
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
 th, td {
   padding: 15px;
 }
@@ -41,6 +49,109 @@ th {
 }
 
 table {
-  border-spacing: 5px;
   margin: 5% auto 5% auto;
+}
+
+.remove {
+  border: none;
+  width: 184px;
+  height: 33px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: RobotoSlab;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.remove:hover {
+  background-color: #0362aa;
+}
+
+/* category */
+
+.categoryfilter {
+  display: inline-block;
+}
+
+#category {
+  width: 49px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+#title{
+  width: 197px;
+  height: 29px;
+  font-family: RobotoSlab;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.filter {
+  width: 105px;
+  height: 16px;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.books {
+  margin: 0 2em 0 2em;
+  width: 59px;
+  height: 16px;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.book-cont {
+  width: 1200px;
+  height: 120px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+}
+
+.new-book {
+  width: 174px;
+  height: 24px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888888;
 }

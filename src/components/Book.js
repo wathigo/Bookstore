@@ -38,11 +38,12 @@ class Book extends React.Component {
   render() {
     const { id, title, category } = this.props.book;
     return (
-      <tr>
-        <td>{id}</td>
-        <td>{title}</td>
-        <td>{category}</td>
-        <td><button onClick={this.handleRemoveBook} type="submit">Delete</button></td>
+      <tr className='book-cont'>
+        <td>
+        <div id='category'> {category} </div>
+        <div id='title'> {title} </div>
+        </td>
+        <td><button onClick={this.handleRemoveBook} type="submit" className='remove'>Delete</button></td>
       </tr>
     );
   }
