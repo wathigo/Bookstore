@@ -5,7 +5,7 @@ body {
 }
 
 nav{
-  height: 95px;
+  min-height: 95px;
   background-color: #ffffff;
 }
 
@@ -68,7 +68,7 @@ table {
 
 .remove {
   border: none;
-  width: 184px;
+  min-width: 15vw;
   height: 33px;
   border-radius: 3px;
   background-color: #0290ff;
@@ -186,7 +186,7 @@ table {
 
 
 #title{
-  width: 464px;
+  max-width: 464px;
   height: 45px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
@@ -235,7 +235,8 @@ table {
 
 .book-cont{
   width: 100%;
-  height: 120px;
+  height: 20vh;
+  position: relative;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #ffffff;
@@ -285,4 +286,17 @@ table {
   padding-top: 2%;
   margin-bottom: 5%;
   margin-left: 4%;
+}
+
+@media only screen and (max-width:500px){
+  nav {
+    min-width: 100vw;
+  }
+  .BookList {
+    width: 88%;
+  }
+
+  .header {
+    margin-left: 1em;
+  }
 }
