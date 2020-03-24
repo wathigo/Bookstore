@@ -4,7 +4,7 @@
     React Project
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href="https://librairie.herokuapp.com/">View Demo</a>
     ·
     <a href="https://github.com/wathigo/Bookstore/issues">Report Bug</a>
     ·
